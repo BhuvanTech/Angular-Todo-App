@@ -6,8 +6,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-add-task',
-  standalone: true,
-  imports: [FormsModule],
+  standalone: false,
   templateUrl: './add-task.component.html',
   styleUrl: './add-task.component.css'
 })
@@ -32,7 +31,7 @@ export class AddTaskComponent {
       summary: this.enteredSummary,
       date: this.enteredDueDate
     }, this.userId);
-    
+
     this.close.emit();
   }
 }

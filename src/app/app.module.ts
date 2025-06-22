@@ -2,15 +2,15 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
-import { CommonModule } from "@angular/common";
 import { HeaderComponent } from "./components/header/header.component";
 import { UserComponent } from "./components/user/user.component";
-import { TasksComponent } from "./components/tasks/tasks.component";
+import { SharedModule } from "./components/shared/shared.module";
+import { TasksModule } from "./components/tasks/tasks.module";
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, HeaderComponent, UserComponent],
     bootstrap: [AppComponent],       // specifing root component
-    imports: [BrowserModule, HeaderComponent, UserComponent, TasksComponent]       // Used to specify standalone and other components
+    imports: [BrowserModule, SharedModule, TasksModule]       // Used to specify standalone and other components
 })
 export class AppModule{
 
