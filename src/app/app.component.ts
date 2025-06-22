@@ -8,8 +8,8 @@ import { TasksComponent } from "./components/tasks/tasks.component";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, HeaderComponent, UserComponent, TasksComponent],
+  standalone: false,
+  // imports: [CommonModule, HeaderComponent, UserComponent, TasksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
